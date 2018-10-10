@@ -1,0 +1,1 @@
+A simple Android app that demonstrates how to implement a [Started Service](https://developer.android.com/guide/components/services).
