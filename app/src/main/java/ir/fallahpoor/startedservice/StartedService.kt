@@ -28,7 +28,7 @@ class StartedService : Service() {
             longRunningOperation()
         }
 
-        return Service.START_NOT_STICKY
+        return Service.START_STICKY
     }
 
     private fun longRunningOperation() {
