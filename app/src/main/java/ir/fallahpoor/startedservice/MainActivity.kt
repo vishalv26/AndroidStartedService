@@ -14,8 +14,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.start_service_button).setOnClickListener {
-            startService(Intent(this, StartedService::class.java))
-            showToast("Service started")
+            
+            if(startService(Intent(this, StartedService::class.java)) != null) {
+                showToast("Service is already running")
+            }
+            else {
+                showToast("There is no service running, starting service..")
+            }
+            //showToast("Service started")
         }
 
         findViewById<Button>(R.id.stop_service_button).setOnClickListener {
